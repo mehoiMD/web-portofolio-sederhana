@@ -14,7 +14,8 @@ window.addEventListener("scroll", () => {
   });
 });
 const submit = document.getElementById("submit")
-submit.addEventListener("click", function () {
+submit.addEventListener("click", function (event) {
+  event.preventDefault();
   alert("Terima Kasih Telah Mengunjungi dan Mengirim Pesan Pada Web Portofolio Saya🥰😹");
 });
                       
