@@ -13,9 +13,23 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-const submit = document.getElementById("submit")
-submit.addEventListener("click", function (event) {
-  event.preventDefault();
-  alert("Terima Kasih Telah Mengunjungi dan Mengirim Pesan Pada Web Portofolio Saya🥰😹");
-});
-                      
+const form = document.querySelector("form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  const res = await fetch(form.action, {
+    method: "POST",
+    body: formData,
+    headers: { Accept: "application/json" },
+  });
+
+  if (res.ok) {
+    alert("Anjayyy!! Berhasil ngirim pesan nih😹😹");
+    form.reset();
+  } else {
+    alert("Apcb gagal");
+  }
+});                      
