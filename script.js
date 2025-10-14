@@ -13,8 +13,8 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-const button = document.getElementById("button")
-button.addEventListener("click", function () {
+const submit = document.getElementById("submit")
+submit.addEventListener("click", function () {
   alert("Terima Kasih Telah Mengunjungi dan Mengirim Pesan Pada Web Portofolio Saya🥰😹");
 });
                       
